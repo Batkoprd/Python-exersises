@@ -58,6 +58,11 @@ def count_animals(txt: str):
                 animal_qntty.append(round(combinations_txt.count(animal) ** (1 / 4), 1))
             animals_in_txt.append(animal)
             animal_count = dict(zip(animals_in_txt, animal_qntty))
+            
+    print(animals_in_txt)
+    print(animal_qntty)
+    print(animal_count)
+    
     condition = len(txt) > len(''.join(animals_in_txt)[:len(sorted_txt)])
     animaltxt = ''.join(animals_in_txt)[:len(sorted_txt)]
     counter = 0
@@ -75,49 +80,13 @@ def count_animals(txt: str):
                 counter += 1
         return counter
 
+print(count_animals('goatcode'),
+      count_animals('goatcat'),
+      count_animals('cockdogwdufrbir'),
+      count_animals('dogdogdogdogdog'),
+      count_animals('dogcat' * 3),
+      count_animals(''.join(animals)),
+      count_animals('goatgoatgoatgoat'),
+      count_animals('cockbear' * 3),
+      sep='\n')
 
-    # print(animal_count)
-    # solution = 0
-    # counter = 0
-    # for animal in animal_count:
-    #     counter += len(animal) * animal_count[animal]
-    #     if counter <= len(sorted_txt):
-    #         solution += animal_count[animal]
-    # return int(solution)
-
-print(count_animals('dogdogdogdogdogdog'),
-      count_animals(''.join(animals))
-      )
-
-# def count_animals():
-#
-#
-#
-#     # animal_update_txt1 = list(itertools.combinations(update_txt(txt), animal_len1))
-#     # animal_update_txt2 = list(itertools.combinations(update_txt(txt), animal_len2))
-#     # combinations_update_txt = [
-#     #     ''.join(sorted(combination)) for combination in (animal_update_txt1 + animal_update_txt2)
-#     # ]
-#     # print(combinations_update_txt)
-#
-#     counter = 0
-#     #
-#     for animal in sorted_animals:
-#         if animal in helper_func(animaltxt):
-#             counter += 1
-#
-#     # print(txt)
-#
-#     # print(sorted('dog') in combinations_txt)
-#
-#     print(counter)
-
-
-
-# count_animals('dogcat')
-# count_animals('dogdogdogdog')
-# count_animals(''.join(animals))
-# print(len(animals))
-#
-# print(list(itertools.permutations('dogdog', 3)))
-# print(list(itertools.combinations('dogdog', 3)))
