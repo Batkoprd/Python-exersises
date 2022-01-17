@@ -22,14 +22,6 @@ def is_pandigital(number: int) -> str:
     number_digits = set([digit for digit in str(number)])
     digit_difference = sorted(digits.difference(number_digits))
 
-    # if ''.join(digit_difference) == '7':
-    #     print(
-    #         f'{len(number_digits) == 10}:',
-    #         ''.join(digit_difference), 'отсутствует.'
-    #     )
-    # else:
-    #     print(len(number_digits) == 10)
-
     if len(digit_difference) == 1:
         print(
             f'{len(number_digits) == 10}:',
@@ -42,7 +34,7 @@ def is_pandigital(number: int) -> str:
         )
     else:
         print(len(number_digits) == 10)
-    # print(str(digit_difference) == '7')
+   
 
 
 is_pandigital (98140723568910)
