@@ -22,39 +22,6 @@ harry([
 
 harry([[]]) ➞ -1
 """
-# import random
-#
-# def harry(array: list) -> int:
-#
-#     rows = len(array)
-#     columns = len(array[0])
-#     # print(rows, columns)
-#     path = []
-#     summ = 0
-#     neighbors = {}
-#     for row in range(rows):
-#         for column in range(columns):
-#
-#
-#             path.append(max((array[row][column], array[column][row])))
-#
-#     print(random.sample(path, (rows + columns - 1)))
-#
-#
-#
-#     print((path))
-#
-#     print(summ)
-
-
-
-# harry([
-#   [1, 2, 3],
-#   [6, 7, 8],
-#   [11, 12, 13],
-#
-# ])
-
 
 def filled_path(array: list, maximum, minumum) -> list:
 
@@ -100,42 +67,29 @@ def harry(array: list, maximum, minimum) -> int:
 
 
 
-harry([[5],
-       [5, 3, 40],
-       [5, 5, 5]])
 
 
+print(
+  harry([[0], 
+         [0, 11, 1], 
+         [1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0], 
+         [6, 7, 8, 9], 
+         [0, 0, 0, 0, 15, 0, 0]]),
+  sum([11, 2, 7, 8, 9, 15]),
+  harry([[100]]),
+  harry([[1, 1, 1],
+         [1, 1, 1],
+         [1, 1, 1]]), sep = '\n'
 
-# print(
-#     path([
-#         [1],
-#         [1, 1, 1, 1],
-#         [3, 3, 3],
-#         [2, 2]
-#         ]
-#     )
-# )
-# (1+6+11+12+13+14+15)
+)
 
-# harry([[]])
+# примеры из задания:
 
-# def minPathSum(grid):
-#
-#
-#     m = len(grid)
-#     n = len(grid[0])
-#     for i in range(1, n):
-#         grid[0][i] += grid[0][i-1]
-#     for i in range(1, m):
-#         grid[i][0] += grid[i-1][0]
-#     for i in range(1, m):
-#         for j in range(1, n):
-#             grid[i][j] += max(grid[i-1][j], grid[i][j-1])
-#     return grid[-1][-1]
-#
-# print(minPathSum([
-#     [1, 2, 3, 4, 5],
-#     [6, 7, 8, 9, 10],
-#     [11, 12, 13, 14, 15]
-#
-# ]))
+print(
+  harry([[5, 2], 
+         [5, 2]]),
+  harry([[1, 2, 3, 4, 5],
+         [6, 7, 8, 9, 10],
+         [11, 12, 13, 14, 15]]),
+  harry([[]]), sep = '\n'
+)
