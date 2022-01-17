@@ -48,18 +48,6 @@ can_exit([
 3. Также эту задачу не обязательно сдавать на repl.it - страницы на гитхабе либо просто файла будет достаточно.
 """
 
-import turtle
-
-# if column > 0 and maze[row][column - 1] == 0:
-#     mines_nearby += 1
-# if column < (columns - 1) and maze[row][column + 1] == 0:
-#     mines_nearby += 1
-# if row < (rows - 1) and maze[row + 1][column] == 0:
-#     mines_nearby += 1
-# if row > 0 and maze[row - 1][column] == 0:
-#     mines_nearby += 1
-
-
 
 def can_exit(maze: list) -> bool:
 
