@@ -40,17 +40,3 @@ same_length (101010110),
 same_length (111100001100),
 
 same_length (1111), sep='\n')
-# def group_list(number:int) -> list:
-#     lst_num = str(number)
-#     lst = []
-#     for item, group in itertools.groupby(lst_num):
-#         #lst.append(item*(len(list(group))))
-#         print(len(list(group)))
-#
-#     print(lst)
-#
-#
-#
-#
-# group_list(123) #-> ('111')
-# group_list(110011100010) #-> ('11', '00', '111', '000', '1', '0')
